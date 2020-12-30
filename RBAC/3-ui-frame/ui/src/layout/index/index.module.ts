@@ -4,13 +4,13 @@ import { IndexComponent } from './index.component';
 import { ContentComponent } from './content/content.component';
 import { CrumbComponent } from './crumb/crumb.component';
 import { HeaderComponent } from './header/header.component';
-import { SiderComponent } from './sider/sider.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { RouterModule } from '@angular/router';
 import { mainRoutes } from 'src/environments/routes';
 
 @NgModule({
-  declarations: [IndexComponent, ContentComponent, CrumbComponent, HeaderComponent, SiderComponent, TabsComponent],
+  declarations: [IndexComponent, ContentComponent, CrumbComponent, HeaderComponent, SidebarComponent, TabsComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([
