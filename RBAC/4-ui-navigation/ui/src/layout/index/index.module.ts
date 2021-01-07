@@ -9,12 +9,16 @@ import { TabsComponent } from './tabs/tabs.component';
 import { RouterModule } from '@angular/router';
 import { mainRoutes } from 'src/environments/routes';
 import { XMenuModule } from '@ng-nest/ui/menu';
+import { XSliderModule } from '@ng-nest/ui/slider';
+import { XIconModule } from '@ng-nest/ui/icon';
 
 @NgModule({
   declarations: [IndexComponent, ContentComponent, CrumbComponent, HeaderComponent, SidebarComponent, TabsComponent],
   imports: [
     CommonModule,
     XMenuModule,
+    XSliderModule,
+    XIconModule,
     RouterModule.forChild([
       {
         path: '',
