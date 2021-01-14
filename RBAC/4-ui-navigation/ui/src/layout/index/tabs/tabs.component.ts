@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { IndexService } from '../index.service';
 
 @Component({
   selector: 'app-tabs',
@@ -6,16 +7,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class TabsComponent implements OnInit {
-  data = [];
-  activatedIndex: number = -1;
-  showClose = 0;
-  constructor() {}
+  constructor(public index: IndexService) {}
 
   ngOnInit(): void {}
-
-  tab(index: number) {}
-
-  close() {
-    
-  }
 }
