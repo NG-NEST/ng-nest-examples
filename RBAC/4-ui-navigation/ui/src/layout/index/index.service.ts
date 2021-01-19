@@ -54,11 +54,6 @@ export class IndexService {
     }
   }
 
-  /**
-   * demo：http://localhost:4200/index/home;param1=aaa;param2=bbb
-   * result: { path: "/index/home", param: { param1: "aaa", param2: "bbb" } }
-   * @param path
-   */
   getUrl(path: string): { path: string; param: { [property: string]: string } } {
     let result: { path: string; param: { [prop: string]: string } } = {
       path: '',

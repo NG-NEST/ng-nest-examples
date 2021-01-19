@@ -1,6 +1,12 @@
-<x-slider [data]="index.tabs"></x-slider>
-
-<!-- <x-slider [data]="data" size="big" [nodeTpl]="nodeTpl" (indexChange)="tab($event)" [activatedIndex]="activatedIndex"></x-slider>
+<div class="slider">
+  <x-slider
+    [data]="index.tabs"
+    size="big"
+    [nodeTpl]="nodeTpl"
+    (indexChange)="indexChange($event)"
+    [activatedIndex]="activatedIndex"
+  ></x-slider>
+</div>
 
 <ng-template #nodeTpl let-node="$node">
   <div class="tab">
@@ -10,4 +16,4 @@
       <x-icon title="关闭" type="ado-close"></x-icon>
     </div>
   </div>
-</ng-template> -->
+</ng-template>
