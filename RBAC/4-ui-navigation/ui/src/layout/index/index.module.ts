@@ -11,6 +11,7 @@ import { mainRoutes } from 'src/environments/routes';
 import { XMenuModule } from '@ng-nest/ui/menu';
 import { XSliderModule } from '@ng-nest/ui/slider';
 import { XIconModule } from '@ng-nest/ui/icon';
+import { XCrumbModule } from '@ng-nest/ui/crumb';
 
 @NgModule({
   declarations: [IndexComponent, ContentComponent, CrumbComponent, HeaderComponent, SidebarComponent, TabsComponent],
@@ -19,6 +20,7 @@ import { XIconModule } from '@ng-nest/ui/icon';
     XMenuModule,
     XSliderModule,
     XIconModule,
+    XCrumbModule,
     RouterModule.forChild([
       {
         path: '',

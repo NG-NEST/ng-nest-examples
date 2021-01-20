@@ -4,6 +4,7 @@ import { XMenuNode } from '@ng-nest/ui/menu';
 import { filter } from 'rxjs/operators';
 import { drop } from 'lodash';
 import { XSliderNode } from '@ng-nest/ui/slider';
+import { XCrumbNode } from '@ng-nest/ui/crumb';
 
 @Injectable({ providedIn: 'root' })
 export class IndexService {
@@ -19,11 +20,14 @@ export class IndexService {
 
   tabs: XSliderNode[] | { [property: string]: any }[] = [];
 
+  crumbs: XCrumbNode[] = [];
+
   session: { [property: string]: any } = {};
 
   constructor(private router: Router) {
     this.router.events.pipe(filter((x) => x instanceof NavigationEnd)).subscribe(() => {
       this.setTabs();
+      this.setCrumbs();
     });
   }
 
@@ -52,6 +56,28 @@ export class IndexService {
         };
       }
     }
+  }
+
+  setCrumbs() {
+    let menu = this.menus.find((x) => x.routerLink === `./${this.session.activatedPage}`);
+    let crumbs: XCrumbNode[] = [];
+    let addParent = (item: { [property: string]: any }) => {
+      if (item.pid === null && item.pid === '') return;
+      let parent = this.menus.find((x) => x.id === item.pid);
+      if (parent) {
+        crumbs.unshift({
+          id: parent.id,
+          label: parent.label,
+          data: parent
+        });
+        addParent(parent);
+      }
+    };
+    if (menu) {
+      crumbs.push({ id: menu.id, label: menu.label, data: menu });
+      addParent(menu);
+    }
+    this.crumbs = crumbs;
   }
 
   getUrl(path: string): { path: string; param: { [property: string]: string } } {
