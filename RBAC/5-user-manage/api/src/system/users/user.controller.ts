@@ -9,6 +9,8 @@ import {
   Query,
 } from '@nestjs/common';
 import { XIdType, XQuery } from '@ng-nest/api/core';
+import { plainToClass } from 'class-transformer';
+import { CreateUserDto } from './dto/create-user.dto';
 import { User } from './user.entity';
 import { UserService } from './user.service';
 
@@ -27,8 +29,8 @@ export class UserController {
   }
 
   @Post()
-  async post(@Body() user: User): Promise<User> {
-    return await this.userService.post(user);
+  async post(@Body() user: CreateUserDto): Promise<User> {
+    return await this.userService.post(plainToClass(User,user));
   }
 
   @Put()

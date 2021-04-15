@@ -5,13 +5,13 @@ export class User {
   /**
    * 编码
    */
-  @PrimaryColumn('uuid', { length: 36 })
+  @PrimaryColumn('uuid', { length: 36, comment: '编码' })
   id: string;
 
   /**
    * 名称
    */
-  @Column({ length: 36 })
+  @Column({ length: 36, comment: '名称' })
   name: string;
 
   /**
