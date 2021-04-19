@@ -1,1 +1,4 @@
-<p>user works!</p>
+<div class="app-header">
+  <x-button type="primary" (click)="pageTo('./add')">新增</x-button>
+</div>
+<x-table [columns]="columns" [data]="data" loading> </x-table>
