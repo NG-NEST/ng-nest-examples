@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { guid } from '@ng-nest/ui/core';
 import { XFormComponent, XControl } from '@ng-nest/ui/form';
@@ -8,7 +8,8 @@ import { UserService } from './../user.service';
 @Component({
   selector: 'app-user-detail',
   templateUrl: './user-detail.component.html',
-  styleUrls: ['./user-detail.component.scss']
+  styleUrls: ['./user-detail.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UserDetailComponent implements OnInit {
   id: string = '';
@@ -29,6 +30,7 @@ export class UserDetailComponent implements OnInit {
       control: 'input',
       id: 'email',
       label: '邮箱',
+      required: true,
       pattern: /^([a-zA-Z\d])(\w|\-)+@[a-zA-Z\d]+\.[a-zA-Z]{2,4}$/,
       message: '邮箱格式不正确，admin@ngnest.com'
     },
@@ -36,6 +38,7 @@ export class UserDetailComponent implements OnInit {
       control: 'input',
       id: 'phone',
       label: '手机号',
+      required: true,
       pattern: /^((\+?86)|(\(\+86\)))?1\d{10}$/,
       message: '手机号格式不正确，+8615212345678'
     },
@@ -85,17 +88,17 @@ export class UserDetailComponent implements OnInit {
         if (this.type === 'add') {
           this.userService.post(this.form.formGroup.value).subscribe((x) => {
             this.message.success('新增成功！');
-            this.router.navigate(['../../users'], { relativeTo: this.activatedRoute });
+            this.router.navigate(['/index/users']);
           });
         } else if (this.type === 'edit') {
           this.userService.put(this.form.formGroup.value).subscribe((x) => {
             this.message.success('修改成功！');
-            this.router.navigate(['../../users'], { relativeTo: this.activatedRoute });
+            this.router.navigate(['/index/users']);
           });
         }
         break;
       case 'cancel':
-        this.router.navigate(['../../users'], { relativeTo: this.activatedRoute });
+        this.router.navigate(['/index/users']);
         break;
     }
   }

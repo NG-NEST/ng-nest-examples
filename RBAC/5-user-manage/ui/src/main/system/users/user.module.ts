@@ -7,6 +7,8 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { XButtonModule } from '@ng-nest/ui/button';
 import { XFormModule } from '@ng-nest/ui/form';
 import { XMessageModule } from '@ng-nest/ui/message';
+import { XLinkModule } from '@ng-nest/ui/link';
+import { XMessageBoxModule } from '@ng-nest/ui/message-box';
 
 @NgModule({
   declarations: [UserComponent, UserDetailComponent],
@@ -16,6 +18,8 @@ import { XMessageModule } from '@ng-nest/ui/message';
     XButtonModule,
     XFormModule,
     XMessageModule,
+    XLinkModule,
+    XMessageBoxModule,
     RouterModule.forChild([
       { path: '', component: UserComponent },
       { path: ':type', component: UserDetailComponent },

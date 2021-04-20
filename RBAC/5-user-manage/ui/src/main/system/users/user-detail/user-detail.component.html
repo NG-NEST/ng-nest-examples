@@ -14,6 +14,11 @@
 <div class="app-footer">
   <x-buttons space="0.5">
     <x-button (click)="action('cancel')">取消</x-button>
-    <x-button type="primary" (click)="action('save')">保存</x-button>
+    <x-button
+      type="primary"
+      (click)="!formInvalid && action('save')"
+      [disabled]="formInvalid || disabled"
+      >保存</x-button
+    >
   </x-buttons>
 </div>
