@@ -1,3 +1,4 @@
+import { ApiQuery } from '@nestjs/swagger';
 import { XId } from './id.interface';
 
 /**
@@ -13,8 +14,8 @@ export interface XResultList<Entity extends XId> {
  * 查询过滤条件
  */
 export interface XQuery {
-  index?: number,
-  size?: number,
+  index?: number;
+  size?: number;
   sort?: XSort[];
   filter?: XFilter[];
   group?: string;
@@ -47,3 +48,5 @@ export interface XGroupItem extends XId {
   [prototype: string]: any;
   count?: number;
 }
+
+export type XSafeAny = any;

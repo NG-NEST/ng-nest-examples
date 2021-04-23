@@ -1,9 +1,11 @@
+import { ApiProperty, ApiQuery } from '@nestjs/swagger';
 import { ObjectID } from 'typeorm';
 
 /**
  * id 属性
  */
-export interface XId {
+export class XId {
+  @ApiProperty({name: 'id'})
   id: XIdType;
 }
 
