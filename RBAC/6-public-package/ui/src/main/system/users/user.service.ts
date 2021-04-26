@@ -1,29 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { XId, XResultList } from '@ng-nest/ui/core';
+import { XId } from '@ng-nest/ui/core';
+import { RepositoryService } from 'src/services/repository.service';
 
 @Injectable({ providedIn: 'root' })
-export class UserService {
-  constructor(private http: HttpClient) {}
-
-  getList(filter: { [property: string]: any }) {
-    return this.http.get<XResultList<User>>(`/api/users`, { params: filter });
-  }
-
-  get(id: string) {
-    return this.http.get<User>(`/api/users/${id}`);
-  }
-
-  post(user: User) {
-    return this.http.post<User>(`/api/users`, user);
-  }
-
-  put(user: User) {
-    return this.http.put<User>(`/api/users`, user);
-  }
-
-  delete(id: string) {
-    return this.http.delete<boolean>(`/api/users/${id}`);
+export class UserService extends RepositoryService<User> {
+  constructor(http: HttpClient) {
+    super(http, { controller: { name: '/api/users' } });
   }
 }
 

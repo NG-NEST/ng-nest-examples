@@ -11,7 +11,6 @@ import {
 import { ApiParam } from '@nestjs/swagger';
 import { XIdType, XQuery } from '@ng-nest/api/core';
 import { plainToClass } from 'class-transformer';
-import { InsertResult } from 'typeorm';
 import { CreateUserDto } from './dto/create-user.dto';
 import { ListUserDto } from './dto/list-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
@@ -23,6 +22,8 @@ export class UserController {
   constructor(public readonly userService: UserService) {}
 
   @Get()
+  @ApiParam({ name: 'index', type: Number, example: 1 })
+  @ApiParam({ name: 'size', type: Number, example: 10 })
   async getList(@Query() query: XQuery) {
     let result = await this.userService.getList(query);
     return {
