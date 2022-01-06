@@ -1,0 +1,71 @@
+{
+  "containers": [
+    {
+      "name": "aby-container",
+      "version": "0.0.1",
+      "description": "XX大数据平台",
+      "filesMap": {
+        "/3rdpartylicenses.txt": "views/containers/aby-container/3rdpartylicenses.txt",
+        "/favicon.ico": "views/containers/aby-container/favicon.ico",
+        "/index.html": "views/containers/aby-container/index.html",
+        "/main.2045a6f930c3f6b2.js": "views/containers/aby-container/main.2045a6f930c3f6b2.js",
+        "/polyfills.8055ff88e94bd6a5.js": "views/containers/aby-container/polyfills.8055ff88e94bd6a5.js",
+        "/runtime.b26314dee97f51e2.js": "views/containers/aby-container/runtime.b26314dee97f51e2.js",
+        "/styles.8aa13a07842aad6a.css": "views/containers/aby-container/styles.8aa13a07842aad6a.css"
+      }
+    }
+  ],
+  "plugins": [
+    {
+      "name": "aby-customer-manage",
+      "version": "0.0.1",
+      "description": "客户管理",
+      "filesMap": {
+        "/3rdpartylicenses.txt": "views/plugins/aby-customer-manage/3rdpartylicenses.txt",
+        "/409.5243e4ab8b5b13bf.js": "views/plugins/aby-customer-manage/409.5243e4ab8b5b13bf.js",
+        "/548.c4cc8e06a5180fa3.js": "views/plugins/aby-customer-manage/548.c4cc8e06a5180fa3.js",
+        "/625.7ca7ed70fbc0da49.js": "views/plugins/aby-customer-manage/625.7ca7ed70fbc0da49.js",
+        "/favicon.ico": "views/plugins/aby-customer-manage/favicon.ico",
+        "/index.html": "views/plugins/aby-customer-manage/index.html",
+        "/main.53f5c1dc2c937d5a.js": "views/plugins/aby-customer-manage/main.53f5c1dc2c937d5a.js",
+        "/polyfills.19394cc734151826.js": "views/plugins/aby-customer-manage/polyfills.19394cc734151826.js",
+        "/runtime.de144d0e5b3debc9.js": "views/plugins/aby-customer-manage/runtime.de144d0e5b3debc9.js",
+        "/styles.8aa13a07842aad6a.css": "views/plugins/aby-customer-manage/styles.8aa13a07842aad6a.css"
+      }
+    },
+    {
+      "name": "aby-plugin-manage",
+      "version": "0.0.1",
+      "description": "插件管理",
+      "filesMap": {
+        "/3rdpartylicenses.txt": "views/plugins/aby-plugin-manage/3rdpartylicenses.txt",
+        "/409.2922479afaeb0ef8.js": "views/plugins/aby-plugin-manage/409.2922479afaeb0ef8.js",
+        "/548.e6292e92e8a9580d.js": "views/plugins/aby-plugin-manage/548.e6292e92e8a9580d.js",
+        "/625.a15c3c9f0f791509.js": "views/plugins/aby-plugin-manage/625.a15c3c9f0f791509.js",
+        "/favicon.ico": "views/plugins/aby-plugin-manage/favicon.ico",
+        "/index.html": "views/plugins/aby-plugin-manage/index.html",
+        "/main.a1faeaead68f0bf5.js": "views/plugins/aby-plugin-manage/main.a1faeaead68f0bf5.js",
+        "/polyfills.b01b95d42bed97b8.js": "views/plugins/aby-plugin-manage/polyfills.b01b95d42bed97b8.js",
+        "/runtime.d982f23bff0aa76d.js": "views/plugins/aby-plugin-manage/runtime.d982f23bff0aa76d.js",
+        "/styles.8aa13a07842aad6a.css": "views/plugins/aby-plugin-manage/styles.8aa13a07842aad6a.css"
+      }
+    },
+    {
+      "name": "aby-project-manage",
+      "version": "0.0.1",
+      "description": "项目管理",
+      "filesMap": {
+        "/3rdpartylicenses.txt": "views/plugins/aby-project-manage/3rdpartylicenses.txt",
+        "/409.b8013eaf05284e17.js": "views/plugins/aby-project-manage/409.b8013eaf05284e17.js",
+        "/548.689020897b7ec64f.js": "views/plugins/aby-project-manage/548.689020897b7ec64f.js",
+        "/625.54b91ae5782ee375.js": "views/plugins/aby-project-manage/625.54b91ae5782ee375.js",
+        "/favicon.ico": "views/plugins/aby-project-manage/favicon.ico",
+        "/index.html": "views/plugins/aby-project-manage/index.html",
+        "/main.88e6fc6a9e5dca46.js": "views/plugins/aby-project-manage/main.88e6fc6a9e5dca46.js",
+        "/polyfills.3af129e501163c6d.js": "views/plugins/aby-project-manage/polyfills.3af129e501163c6d.js",
+        "/runtime.a53f55149caacc51.js": "views/plugins/aby-project-manage/runtime.a53f55149caacc51.js",
+        "/styles.8aa13a07842aad6a.css": "views/plugins/aby-project-manage/styles.8aa13a07842aad6a.css"
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+:host {
+  height: calc(100% - 3.25rem);
+  width: 14rem;
+  background-color: white;
+  position: fixed;
+  left: 0;
+  top: 3.25rem;
+  box-shadow: 0 0.125rem 0.625rem 0 rgba(0, 0, 0, 0.14);
+  &.development {
+    height: 100%;
+    top: 0;
+  }
+  > section {
+    position: relative;
+    height: 100%;
+    width: 14rem;
+    padding: 1rem 0;
+    float: left;
+    overflow: hidden;
+    &:hover {
+      overflow-y: auto;
+    }
+    ::ng-deep x-menu {
+      .x-menu.x-menu-column {
+        width: 14rem;
+      }
+      .x-menu-nodes > .x-menu-node {
+        border-right: none;
+        margin: 0 0.5rem;
+        &.x-activated::after {
+          border-right: none;
+        }
+      }
+    }
+  }
+}

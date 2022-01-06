@@ -1,0 +1,28 @@
+:host {
+  height: 3.25rem;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 0.125rem 0.625rem 0 rgba(0, 0, 0, 0.14);
+  box-sizing: border-box;
+}
+
+:host .logo {
+  width: 14rem;
+}
+
+:host .logo h4 {
+  margin: 0 1.25rem;
+  padding: 0;
+}
+
+:host .slider {
+  width: calc(100% - 14rem);
+}
+
+:host ::ng-deep .x-slider-scroll > ul > li.x-slider-highlight {
+  border: 0;
+}
